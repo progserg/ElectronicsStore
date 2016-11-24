@@ -1,0 +1,234 @@
+@import "reset.css";
+.selectors:before,
+.selectors:after,
+.content:before,
+.content:after,
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.selectors:after,
+.content:after,
+.clearfix:after {
+  clear: both;
+}
+@font-face {
+  font-family: "Myriad Pro Regular";
+  src: url("fonts/MyriadPro-Regular.otf");
+}
+@font-face {
+  font-family: "Myriad Bold";
+  src: url("fonts/MyriadPro-Bold.otf");
+}
+@font-face {
+  font-family: "Myriad Roman";
+  src: url("fonts/Myriad_Roman.ttf");
+}
+html,
+body {
+  width: 100%;
+  font: 100%/1.5em Arial, "Myriad Roman", sans-serif;
+}
+.content {
+  width: 100%;
+  max-width: 940px;
+  min-width: 940px;
+  margin: 0 auto;
+  margin-top: 1.063829787234043%;
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.cols {
+  float: left;
+  text-align: center;
+  margin: 0 auto;
+}
+.col-1 {
+  width: 8.333333333333332%;
+}
+.col-2 {
+  width: 16.666666666666664%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33333333333333%;
+}
+.col-5 {
+  width: 41.666666666666664%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33333333333333%;
+}
+.col-8 {
+  width: 66.66666666666666%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33333333333333%;
+}
+.col-11 {
+  width: 91.66666666666666%;
+}
+.col-12 {
+  width: 100%;
+}
+.row {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+header h1 {
+  text-transform: uppercase;
+  color: #121212;
+  font: 1.875em "Myriad Bold";
+  margin-top: 7%;
+}
+header h1 span {
+  text-transform: none;
+  font: 1em "Myriad Roman";
+  color: #0bb1e8;
+}
+header img {
+  float: left;
+  margin-right: 2.127659574468085%;
+  margin-left: 3.404255319148936%;
+}
+header .logo {
+  float: left;
+}
+header p {
+  text-align: left;
+  font: 0.75em Arial;
+  color: #111017;
+}
+.cart {
+  font: 0.8125em Arial;
+  margin-bottom: 2.127659574468085%;
+}
+.cart a {
+  color: #0bb1e8;
+  text-decoration: none;
+  border-bottom: 1px #0bb1e8 solid;
+}
+.cart text {
+  color: #9a9a9a;
+}
+.cart #cart_count {
+  color: #121212;
+}
+.language {
+  padding-left: 2.127659574468085%;
+  box-sizing: border-box;
+  float: right;
+  width: 86.38297872340426%;
+  height: 41px;
+  background: url("../img/choose-language.png") center no-repeat;
+}
+.language .text {
+  float: left;
+  font: 0.8125em Arial;
+  line-height: 1.625em;
+  color: #ffffff;
+  margin-right: 6.060606060606061%;
+}
+.language .selectors {
+  margin-top: 2.216748768472906%;
+}
+select {
+  padding-left: 1.262626262626263%;
+  font-size: 0.6875em;
+  color: #9a9a9a;
+  width: 23.48484848484848%;
+  height: 22px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  background-image: url('../img/select.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  line-height: 1em;
+  /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+}
+select::-ms-expand {
+  display: none;
+}
+option {
+  color: #9a9a9a;
+}
+#lang {
+  float: left;
+}
+#money {
+  float: right;
+  margin-right: 6.565656565656566%;
+}
+.main_menu {
+  height: 51px;
+  background: url("../img/main-menu.png") no-repeat center;
+  background-size: 100%;
+  font: 900 100%/1.5em "Myriad Roman";
+  color: antiquewhite;
+}
+.main_menu ul {
+  width: 70.57021276595745%;
+  display: inline-block;
+  float: left;
+  margin-top: 1.808510638297872%;
+  list-style-type: none;
+}
+.main_menu ul li {
+  float: left;
+  margin-left: 5.125422093584178%;
+  margin-right: 5.125422093584178%;
+}
+.main_menu ul li a {
+  color: #2f3638;
+  text-decoration: none;
+}
+.main_menu ul li a:hover {
+  color: #0bb1e8;
+}
+.main_menu ul li:first-child a {
+  color: #0bb1e8;
+}
+.main_menu input {
+  font: 900 100%/1.846153846153846em "Myriad Roman";
+  color: #2f3638;
+  margin-left: 5.319148936170213%;
+  margin-top: 1.382978723404255%;
+  margin-right: 0.9574468085106383%;
+  float: left;
+  border: 1px #cacaca solid;
+  width: 17.4468085106383%;
+  height: 41.17647058823529%;
+}
+.main_menu button {
+  border-radius: 3px;
+  float: left;
+  border: none;
+  height: 45.09803921568627%;
+  width: 2.978723404255319%;
+  margin-top: 1.48936170212766%;
+  background: url("../img/search.png") no-repeat center;
+}
+.main_menu button:hover {
+  box-shadow: 2px 2px 5px rgba(11, 159, 232, 0.6);
+}

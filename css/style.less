@@ -1,0 +1,315 @@
+//сбрасываем стили
+@import "reset.css";
+//сбрасываем стили
+
+//очищаем float
+.selectors:before,
+.selectors:after,
+.content:before,
+.content:after,
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.selectors:after,
+.content:after,
+.clearfix:after {
+  clear: both;
+}
+
+//очищаем float
+
+//шрифты
+@font-face {
+  font-family: "Myriad Pro Regular";
+  src: url("fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "Myriad Bold";
+  src: url("fonts/MyriadPro-Bold.otf");
+}
+
+@font-face {
+  font-family: "Myriad Roman";
+  src: url("fonts/Myriad_Roman.ttf");
+}
+
+//шрифты
+
+
+//цвета
+@white: #ffffff;
+@aqua: #0bb1e8;
+@black-logo: #121212;
+@black-mini: #111017;
+@grey: #9a9a9a;
+@gray-main-menu: #2f3638;
+@grey-stroke: #cacaca;
+//цвета
+
+//функции
+.col-x(@count: 1) {
+  width: (((@max-width/12)*@count)/@max-width)*100%;
+}
+.shadow(@color:@black-logo){
+  @temp_color: spin(@color,5%);
+  @red: red(@temp_color);
+  @green: green(@temp_color);
+  @blue: blue(@temp_color);
+  box-shadow: 2px 2px 5px rgba(@red, @green, @blue, 0.6);
+}
+
+//функции
+
+////////////////////////////////////
+html,
+body {
+  width: 100%;
+  font: 100%/1.5em Arial, "Myriad Roman", sans-serif;
+}
+
+@max-width: 940px;
+//основной контейнер макета
+.content {
+  width: 100%;
+  max-width: @max-width;
+  min-width: @max-width;
+  margin: 0 auto;
+  margin-top: 1.063829787234043%;
+  text-align: center;
+}
+
+//основной контейнер макета
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+//создаем сетку из 12-и колонок
+.cols {
+  float: left;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.col-1 {
+  .col-x(1);
+}
+
+.col-2 {
+  .col-x(2);
+}
+
+.col-3 {
+  .col-x(3);
+}
+
+.col-4 {
+  .col-x(4);
+}
+
+.col-5 {
+  .col-x(5);
+}
+
+.col-6 {
+  .col-x(6);
+}
+
+.col-7 {
+  .col-x(7);
+}
+
+.col-8 {
+  .col-x(8);
+}
+
+.col-9 {
+  .col-x(9);
+}
+
+.col-10 {
+  .col-x(10);
+}
+
+.col-11 {
+  .col-x(11);
+}
+
+.col-12 {
+  .col-x(12);
+}
+
+//создаем сетку из 12-и колонок
+
+//разделяем на строки
+.row {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+//разделяем на строки
+
+.text-logo() {
+  text-transform: uppercase;
+  color: @black-logo;
+  font: 1.875em "Myriad Bold";
+}
+
+.span() {
+  text-transform: none;
+  font: 1em "Myriad Roman";
+  color: @aqua;
+}
+
+header {
+  h1 {
+    .text-logo;
+    margin-top: 7%;
+    span {
+      .span;
+    }
+
+  }
+  img{
+    float: left;
+    margin-right: 2.127659574468085%;
+    margin-left: 3.404255319148936%;
+  }
+  .logo{
+    float: left;
+  }
+  p {
+    text-align: left;
+    font: 0.75em Arial;
+    color: @black-mini;
+  }
+}
+.cart{
+  font: 0.8125em Arial;
+  margin-bottom: 2.127659574468085%;
+  a{
+    color: @aqua;
+    text-decoration: none;
+    border-bottom: 1px @aqua solid;
+  }
+  text{
+    color: @grey;
+
+  }
+  #cart_count{
+    color: @black-logo;
+  }
+}
+.language{
+  padding-left: 2.127659574468085%;
+  box-sizing: border-box;
+  float: right;
+  width: 86.38297872340426%;
+  height: 41px;
+  background: url("../img/choose-language.png") center no-repeat;
+  .text{
+    float: left;
+    font: 0.8125em Arial;
+    line-height: 1.625em;
+    color: @white;
+    margin-right: 6.060606060606061%;
+  }
+  .selectors{
+    margin-top: 2.216748768472906%;
+  }
+}
+select {
+  padding-left: 1.262626262626263%;
+  font-size: 0.6875em;
+  color: @grey;
+  width: 23.48484848484848%;
+  height: 22px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  background-image: url('../img/select.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  line-height: 1em;
+  /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+}
+
+select::-ms-expand {
+  display: none;
+}
+option{
+  color: @grey;
+}
+#lang{
+  float: left;
+}
+#money{
+  float: right;
+  margin-right: 6.565656565656566%;
+}
+.main_menu{
+  height: 51px;
+  background: url("../img/main-menu.png") no-repeat center;
+  background-size: 100%;
+  font: 900 100%/1.5em "Myriad Roman";
+  color: antiquewhite;
+  ul{
+    width: 70.57021276595745%;
+    display: inline-block;
+    float: left;
+    margin-top: 1.808510638297872%;
+    list-style-type: none;
+    li{
+      float: left;
+      margin-left: 5.125422093584178%;
+      margin-right: 5.125422093584178%;
+      a{
+        color: @gray-main-menu;
+        text-decoration: none;
+      }
+      a:hover{
+        color: @aqua;
+      }
+    }
+    li:first-child a{
+      color: @aqua;
+    }
+  }
+  input{
+    font: 900 100%/1.846153846153846em "Myriad Roman";
+    color: @gray-main-menu;
+    margin-left: 5.319148936170213%;
+    margin-top: 1.382978723404255%;
+    margin-right: 0.9574468085106383%;
+    float: left;
+    border: 1px @grey-stroke solid;
+    width: 17.4468085106383%;
+    height: 41.17647058823529%;
+  }
+  button{
+    border-radius: 3px;
+    float: left;
+    border: none;
+    height: 45.09803921568627%;
+    width: 2.978723404255319%;
+    margin-top: 1.48936170212766%;
+    background: url("../img/search.png") no-repeat center;
+  }
+  button:hover{
+    .shadow(@aqua);
+  }
+}
