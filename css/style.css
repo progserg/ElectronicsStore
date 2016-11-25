@@ -90,17 +90,6 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-header h1 {
-  text-transform: uppercase;
-  color: #121212;
-  font: 1.875em "Myriad Bold";
-  margin-top: 7%;
-}
-header h1 span {
-  text-transform: none;
-  font: 1em "Myriad Roman";
-  color: #0bb1e8;
-}
 header img {
   float: left;
   margin-right: 2.127659574468085%;
@@ -109,7 +98,18 @@ header img {
 header .logo {
   float: left;
 }
-header p {
+header .logo h1 {
+  text-transform: uppercase;
+  color: #121212;
+  font: 1.875em "Myriad Bold";
+  margin-top: 7%;
+}
+header .logo h1 span {
+  text-transform: none;
+  font: 1em "Myriad Roman";
+  color: #0bb1e8;
+}
+header .logo p {
   text-align: left;
   font: 0.75em Arial;
   color: #111017;
@@ -165,7 +165,7 @@ select {
   text-overflow: '';
   /* for IE */
   -ms-appearance: none;
-  appearance: none!important;
+  appearance: none !important;
 }
 select::-ms-expand {
   display: none;
@@ -231,4 +231,105 @@ option {
 }
 .main_menu button:hover {
   box-shadow: 2px 2px 5px rgba(11, 159, 232, 0.6);
+}
+.offers-menu {
+  width: 100%;
+  height: 326px;
+  background: url("../img/border-offers.png") no-repeat center;
+  font: 1.25em "Myriad Roman";
+  line-height: 1.375em;
+  color: #2f3638;
+}
+.offers-menu ul {
+  float: left;
+  width: 27.23404255319149%;
+}
+.offers-menu ul li {
+  text-align: left;
+  height: 62px;
+  background: url("../img/offer-list-background.png");
+  margin-left: 2.811244979919679%;
+  border-radius: 0;
+}
+.offers-menu ul li a {
+  color: #2f3638;
+  text-decoration: none;
+}
+.offers-menu ul li#offer-link-2:hover {
+  background: url("../img/offer-list-background-hover-2.png");
+  /*#offer-link-1 {
+          a {
+            color: @gray-main-menu;
+          }
+          background: url("../img/offer-list-background.png");
+        }*/
+}
+.offers-menu ul li#offer-link-3:hover {
+  background: url("../img/offer-list-background-hover-3.png");
+}
+.offers-menu ul li#offer-link-4:hover {
+  background: url("../img/offer-list-background-hover-4.png");
+}
+.offers-menu ul li#offer-link-5:hover {
+  background: url("../img/offer-list-background-hover-5.png");
+}
+.offers-menu ul li:hover a {
+  color: #ffffff;
+}
+.offers-menu ul li:first-child {
+  margin-top: 2.9296875%;
+  margin-left: 2.811244979919679%;
+  border-top-left-radius: 5px;
+  background: url("../img/offer-list-background-hover-1.png");
+}
+.offers-menu ul li:first-child a {
+  color: #ffffff;
+}
+.offers-menu ul li:last-child {
+  border-bottom-left-radius: 5px;
+}
+.offers-menu ul li a {
+  float: left;
+}
+.offers-menu ul li a img {
+  float: left;
+  margin: 0;
+  margin-right: 10px;
+}
+.offers-menu ul li .offer-link {
+  display: inline-block;
+  text-align: left;
+  margin-left: 16px;
+  margin-top: 18px;
+}
+.offers-menu .selected-offer {
+  float: left;
+  height: 100%;
+  width: 71.91489361702128%;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background: url("../img/selected-offers-background.png") no-repeat center;
+}
+.offers-menu .selected-offer #offer-img {
+  height: 100%;
+}
+.offers-menu .selected-offer .offer-info {
+  display: inline-block;
+  color: #ffffff;
+  font-family: "Myriad Bold";
+}
+.offers-menu .selected-offer .offer-info h2 {
+  font-size: 1.75em;
+  line-height: 1em;
+}
+.offers-menu .selected-offer .offer-info h1 {
+  font-size: 2.75em;
+  line-height: 1em;
+}
+.offers-menu .selected-offer .offer-info h3 {
+  font: 0.95em "Myriad Roman";
+}
+.offers-menu .selected-offer .offer-info .text {
+  width: 180px;
 }
