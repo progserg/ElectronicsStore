@@ -3,6 +3,10 @@
 //сбрасываем стили
 
 //очищаем float
+input:before,
+input:after,
+button:before,
+button:after,
 .selectors:before,
 .selectors:after,
 .content:before,
@@ -13,6 +17,8 @@
   display: table;
 }
 
+input:after,
+button:after,
 .selectors:after,
 .content:after,
 .clearfix:after {
@@ -34,7 +40,7 @@
 
 @font-face {
   font-family: "Myriad Roman";
-  src: url("fonts/Myriad_Roman.ttf");
+  src: url("fonts/Myriad-Roman.ttf");
 }
 
 //шрифты
@@ -47,6 +53,8 @@
 @grey: #9a9a9a;
 @gray-main-menu: #2f3638;
 @grey-stroke: #cacaca;
+@grey-dotted-spliter: #cccccc;
+@grey-search: #a6a5a7;
 //цвета
 
 //функции
@@ -60,6 +68,9 @@
   @green: green(@temp_color);
   @blue: blue(@temp_color);
   box-shadow: 2px 2px 5px rgba(@red, @green, @blue, 0.6);
+}
+.text-shadow(){
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 //функции
@@ -232,6 +243,7 @@ header {
 }
 
 select {
+  border: none;
   padding-left: 1.262626262626263%;
   font-size: 0.6875em;
   color: @grey;
@@ -273,18 +285,27 @@ option {
   height: 51px;
   background: url("../img/main-menu.png") no-repeat center;
   background-size: 100%;
-  font: 900 100%/1.5em "Myriad Roman";
-  color: antiquewhite;
+  font: 400 100%/1.5em "Myriad Roman";
+
   ul {
     width: 70.57021276595745%;
     display: inline-block;
     float: left;
     margin-top: 1.808510638297872%;
     list-style-type: none;
+
+    img{
+      float: left;
+      margin: 0;
+      margin-top: -7px;
+    }
+
     li {
       float: left;
       margin-left: 5.125422093584178%;
       margin-right: 5.125422093584178%;
+
+      overflow: hidden;
       a {
         color: @gray-main-menu;
         text-decoration: none;
@@ -297,31 +318,30 @@ option {
       }
     }
   }
-  input {
-    font: 900 100%/1.846153846153846em "Myriad Roman";
-    color: @gray-main-menu;
-    margin-left: 5.319148936170213%;
-    margin-top: 1.382978723404255%;
-    margin-right: 0.9574468085106383%;
-    float: left;
-    border: 1px @grey-stroke solid;
-    width: 17.4468085106383%;
-    height: 41.17647058823529%;
-  }
-  button {
-    border-radius: 3px;
-    float: left;
-    border: none;
-    height: 45.09803921568627%;
-    width: 2.978723404255319%;
-    margin-top: 1.48936170212766%;
-    background: url("../img/search.png") no-repeat center;
-    &:hover {
-      .shadow(@aqua);
-    }
+}
+input {
+  font: 900 100%/1.846153846153846em "Myriad Roman";
+  color: @gray-main-menu;
+  margin-left: 5.319148936170213%;
+  margin-top: 1.382978723404255%;
+  margin-right: 0.9574468085106383%;
+  float: left;
+  border: 1px @grey-stroke solid;
+  width: 17.4468085106383%;
+  height: 41.17647058823529%;
+}
+button {
+  border-radius: 3px;
+  float: left;
+  border: none;
+  height: 45.09803921568627%;
+  width: 2.978723404255319%;
+  margin-top: 1.48936170212766%;
+  background: url("../img/search.png") no-repeat center;
+  &:hover {
+    .shadow(@aqua);
   }
 }
-
 .offers-menu {
   width: 100%;
   height: 326px;
@@ -332,13 +352,15 @@ option {
   ul {
     float: left;
     width: 27.23404255319149%;
-    //list-style-image: url("../img/offer-list-marker.png");
-
+    padding-top:8px;
+    padding-left: 7px;
+    padding-bottom: 7px;
+    box-sizing: border-box;
     li {
+      width: 100%;
       text-align: left;
       height: 62px;
       background: url("../img/offer-list-background.png");
-      margin-left: 2.811244979919679%;
       border-radius: 0;
       a {
         color: @gray-main-menu;
@@ -367,16 +389,14 @@ option {
       }
 
       &:first-child {
-        margin-top: 2.9296875%;
-        margin-left: 2.811244979919679%;
-        border-top-left-radius: 5px;
+        border-top-left-radius: 3px;
         a {
           color: @white;
         }
         background: url("../img/offer-list-background-hover-1.png");
       }
       &:last-child {
-        border-bottom-left-radius: 5px;
+        border-bottom-left-radius: 3px;
       }
       a {
         float: left;
@@ -414,27 +434,223 @@ option {
       width: 100%;
       height: 100%;
       background: url("../img/selected-offer-1.png") no-repeat bottom right;
-      //background-size: contain;
       &:hover{
-        //background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom right;
       }
-      h2 {
-        font-size: 1.75em;
-        line-height: 1em;
-      }
-      h1 {
-        font-size: 2.75em;
-        line-height: 1em;
-      }
-      h3 {
-        font: 0.95em "Myriad Roman";
-      }
-      .text {
-        width: 180px;
-      }
+
+
     }
   }
 
+}
+
+#offer-text-1 {
+  //display: none;
+  .text-shadow;
+  width: 270px;
+  margin-left: 40px;
+  margin-top: 96px;
+  text-align: left;
+  h2 {
+    font-size: 28px;
+    line-height: 1em;
+  }
+  h1 {
+    margin-top: 20px;
+    font-size: 40px;
+    line-height: 1em;
+  }
+  h3 {
+    margin-top: 7px;
+    font: 100 0.95em "Myriad Roman";
+    line-height: 1.2em;
+  }
+}
+#offer-text-2 {
+  display: none;
+  .text-shadow;
+  width: 330px;
+  margin-left: 60px;
+  margin-top: 105px;
+  text-align: left;
+  h2 {
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 1em;
+  }
+  h1 {
+
+    font-size: 44px;
+    line-height: 1em;
+  }
+  h3 {
+    margin-top: 7px;
+    font: 100 0.95em "Myriad Roman";
+    line-height: 1.2em;
+  }
+}
+#offer-text-3 {
+  display: none;
+  .text-shadow;
+  width: 250px;
+  margin-left: 60px;
+  margin-top: 120px;
+  text-align: left;
+  h1 {
+    margin-top: 10px;
+    font-size: 40px;
+    line-height: 1em;
+  }
+  h3 {
+    font: 100 0.95em "Myriad Roman";
+    line-height: 1.2em;
+  }
+}
+#offer-text-4 {
+  display: none;
+  .text-shadow;
+  width: 330px;
+  margin-left: 60px;
+  margin-top: 120px;
+  text-align: left;
+  h1 {
+    margin-top: 14px;
+    font-size: 40px;
+    line-height: 1em;
+  }
+  h3 {
+    font: 100 0.95em "Myriad Roman";
+    line-height: 1.2em;
+  }
+}
+#offer-text-5 {
+  display: none;
+  .text-shadow;
+  width: 180px;
+  margin-left: 40px;
+  margin-top: 86px;
+  h2 {
+    font-size: 1.75em;
+    line-height: 1em;
+  }
+  h1 {
+    font-size: 2.75em;
+    line-height: 1em;
+  }
+  h3 {
+    margin-top: 7px;
+    font: 100 0.95em "Myriad Roman";
+    line-height: 1.2em;
+  }
+}
+
+//aside
+.left-menu{
+  float: left;
+  width: 256px;
+  text-align: left;
+  ul{
+    //float: left;
+    list-style-image: url("../img/arrow-right.png");
+    li{
+      margin-left: 40px;
+      color: @grey-dotted-spliter;
+      border-bottom: 1px dotted;
+
+      &:last-child{
+        border: none;
+      }
+      a{
+        text-decoration: none;
+        font: 300 14px/30px Arial, sans-serif;
+        color: @black-mini;
+        &:hover{
+          color: @aqua;
+        }
+      }
+    }
+  }
+}
+.left-menu-header{
+  font: 300 16px/30px Arial, sans-serif;
+  height: 32px;
+  background: url("../img/left-menu-header.png") no-repeat center;
+  p{
+    margin: 0;
+    padding: 0;
+    padding-top: 3px;
+    margin-left: 30px;
+  }
+}
+.left-menu-offer{
+  height: 190px;
+  width: 100%;
+  background: url("../img/left-menu-offer.png") no-repeat center;
+  .text{
+    display: inline-block;
+    margin-top: 56px;
+    margin-left: 35px;
+    width: 120px;
+    color: @white;
+    .model{
+      font: 100 23px/20px "Myriad Pro Regular", Arial, sans-serif;
+    }
+    .price{
+      margin-top: 10px;
+      font: bold 23px/20px "Myriad Pro Regular", Arial, sans-serif;
+    }
+  }
+}
+.search-select{
+  display: inline-block;
+  box-sizing: border-box;
+  //width: 100%;
+  margin-top: 18px;
+  margin-left: 18px;
+  margin-bottom: 10px;
+  input{
+    width: 160px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    font: 100 12px/32px Arial, sans-serif;
+    padding-left: 10px;
+    &::-webkit-input-placeholder {
+      color: @grey-search;
+    }
+    &::-moz-placeholder {
+      color: @grey-search;
+    }
+  }
+  button{
+    background: url("../img/button-arrow-down.png");
+    width: 36px;
+    height: 23px;
+    margin: 0;
+    margin-left: 9px;
+    padding: 0;
+  }
+}
+.row-view-content{
+  width: 684px;
+  float: right;
+  img{
+    float: left;
+    padding-top: 7px;
+    &.horisontal{
+      padding: 0;
+    }
+  }
+}
+.cols-view{
+  float: left;
+}
+.col-view{
+  width: 163px;
+  height: 223px;
+  background-color: yellow;
+  &:first-child{
+    padding-right: 7px;
+  }
 }
