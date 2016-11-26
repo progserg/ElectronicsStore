@@ -69,7 +69,8 @@ button:after,
   @blue: blue(@temp_color);
   box-shadow: 2px 2px 5px rgba(@red, @green, @blue, 0.6);
 }
-.text-shadow(){
+
+.text-shadow() {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -294,7 +295,7 @@ option {
     margin-top: 1.808510638297872%;
     list-style-type: none;
 
-    img{
+    img {
       float: left;
       margin: 0;
       margin-top: -7px;
@@ -319,6 +320,7 @@ option {
     }
   }
 }
+
 input {
   font: 900 100%/1.846153846153846em "Myriad Roman";
   color: @gray-main-menu;
@@ -330,6 +332,7 @@ input {
   width: 17.4468085106383%;
   height: 41.17647058823529%;
 }
+
 button {
   border-radius: 3px;
   float: left;
@@ -342,6 +345,7 @@ button {
     .shadow(@aqua);
   }
 }
+
 .offers-menu {
   width: 100%;
   height: 326px;
@@ -352,7 +356,7 @@ button {
   ul {
     float: left;
     width: 27.23404255319149%;
-    padding-top:8px;
+    padding-top: 8px;
     padding-left: 7px;
     padding-bottom: 7px;
     box-sizing: border-box;
@@ -434,11 +438,10 @@ button {
       width: 100%;
       height: 100%;
       background: url("../img/selected-offer-1.png") no-repeat bottom right;
-      &:hover{
+      &:hover {
         background-repeat: no-repeat;
         background-position: bottom right;
       }
-
 
     }
   }
@@ -467,6 +470,7 @@ button {
     line-height: 1.2em;
   }
 }
+
 #offer-text-2 {
   display: none;
   .text-shadow;
@@ -490,6 +494,7 @@ button {
     line-height: 1.2em;
   }
 }
+
 #offer-text-3 {
   display: none;
   .text-shadow;
@@ -507,6 +512,7 @@ button {
     line-height: 1.2em;
   }
 }
+
 #offer-text-4 {
   display: none;
   .text-shadow;
@@ -524,6 +530,7 @@ button {
     line-height: 1.2em;
   }
 }
+
 #offer-text-5 {
   display: none;
   .text-shadow;
@@ -546,70 +553,84 @@ button {
 }
 
 //aside
-.left-menu{
+
+aside {
+  margin-top: 30px;
+}
+
+.left-menu {
   float: left;
   width: 256px;
   text-align: left;
-  ul{
+  ul {
     //float: left;
     list-style-image: url("../img/arrow-right.png");
-    li{
+    li {
       margin-left: 40px;
-      color: @grey-dotted-spliter;
+      /*color: @grey-dotted-spliter;
       border-bottom: 1px dotted;
 
       &:last-child{
         border: none;
-      }
-      a{
+      }*/
+      a {
         text-decoration: none;
         font: 300 14px/30px Arial, sans-serif;
         color: @black-mini;
-        &:hover{
+        &:hover {
           color: @aqua;
         }
       }
     }
   }
 }
-.left-menu-header{
+
+.left-menu-spliter {
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.left-menu-header {
   font: 300 16px/30px Arial, sans-serif;
   height: 32px;
   background: url("../img/left-menu-header.png") no-repeat center;
-  p{
+  p {
     margin: 0;
     padding: 0;
     padding-top: 3px;
     margin-left: 30px;
   }
 }
-.left-menu-offer{
+
+.left-menu-offer {
   height: 190px;
   width: 100%;
   background: url("../img/left-menu-offer.png") no-repeat center;
-  .text{
+  .text {
     display: inline-block;
     margin-top: 56px;
     margin-left: 35px;
     width: 120px;
     color: @white;
-    .model{
+    .model {
       font: 100 23px/20px "Myriad Pro Regular", Arial, sans-serif;
     }
-    .price{
+    .price {
       margin-top: 10px;
       font: bold 23px/20px "Myriad Pro Regular", Arial, sans-serif;
     }
   }
 }
-.search-select{
+
+.search-select {
   display: inline-block;
   box-sizing: border-box;
   //width: 100%;
   margin-top: 18px;
   margin-left: 18px;
   margin-bottom: 10px;
-  input{
+  input {
     width: 160px;
     height: 20px;
     margin: 0;
@@ -623,7 +644,7 @@ button {
       color: @grey-search;
     }
   }
-  button{
+  button {
     background: url("../img/button-arrow-down.png");
     width: 36px;
     height: 23px;
@@ -632,25 +653,153 @@ button {
     padding: 0;
   }
 }
-.row-view-content{
+
+.row-view-content {
   width: 684px;
   float: right;
-  img{
+  padding-left: 20px;
+  box-sizing: border-box;
+  img {
     float: left;
     padding-top: 7px;
-    &.horisontal{
+    &.horisontal {
       padding: 0;
     }
   }
 }
-.cols-view{
+
+.cols-view {
   float: left;
 }
-.col-view{
+
+.col-view {
+  position: relative;
   width: 163px;
   height: 223px;
-  background-color: yellow;
-  &:first-child{
+  //background-color: yellow;
+  &:first-child {
     padding-right: 7px;
+  }
+  .about {
+    position: absolute;
+    width: 120px;
+    margin: 0 auto;
+    top: 143px;
+    left: 23px;
+    p {
+      text-align: left;
+      &.model {
+        font: 200 13px/16px Arial, sans-serif;
+        color: @black-mini;
+      }
+      &.price {
+        font: bold 13px/24px Arial, sans-serif;
+        color: @aqua;
+      }
+    }
+  }
+}
+
+img.product-small {
+  float: none;
+  display: block;
+  margin: 0 auto;
+
+}
+
+
+
+.view-content-header {
+  width: 100%;
+  float: left;
+  padding-left: 30px;
+  box-sizing: border-box;
+  p {
+    float: left;
+    font: 200 24px/32px "Myriad Roman", Arial, sans-serif;
+    &.logo-style-black {
+      color: @gray-main-menu;
+    }
+    &.logo-style-aqua {
+      color: @aqua;
+    }
+  }
+
+}
+
+.view-all {
+  float: right;
+  height: 23px;
+  width: 142px;
+  background: url("../img/view-all.png");
+  color: @white;
+  .text-shadow;
+  font: bold 13px/16px "Arial", sans-serif;
+}
+
+.carusel {
+  float: left;
+  height: 80px;
+  width: 100%;
+  button {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    &.left {
+      float: left;
+      background: url("../img/footer-left-button.png") no-repeat center;
+    }
+    &.right {
+      float: right;
+      background: url("../img/footer-right-button.png") no-repeat center;
+    }
+  }
+  .spotlights {
+    float: left;
+    height: 100%;
+    width: auto;
+    margin-left: 15px;
+    .spotlight {
+      position: relative;
+      height: 100%;
+      width: 215px;
+      background-color: orange;
+      float: left;
+      margin: 0 auto;
+      &#spot-1 {
+        background: url("../img/productPreview/carusel/img-1.png") no-repeat center left;
+      }
+      &#spot-2 {
+        background: url("../img/productPreview/carusel/img-2.png") no-repeat center left;
+      }
+      &#spot-3 {
+        background: url("../img/productPreview/carusel/img-3.png") no-repeat center left;
+      }
+      &#spot-4 {
+        background: url("../img/productPreview/carusel/img-4.png") no-repeat center left;
+      }
+      .about {
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        box-sizing: border-box;
+        padding-left: 5px;
+        p {
+          text-align: left;
+          font: bold 13px/20px Arial, sans-serif;
+          &.model {
+            color: @black-mini;
+            height: 33px;
+            margin-bottom: 10px;
+          }
+          &.price {
+            color: @aqua;
+          }
+          img{
+            margin: auto 0;
+          }
+        }
+      }
+    }
   }
 }
