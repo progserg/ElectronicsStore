@@ -1,5 +1,4 @@
 ;
-
 function changeAll(e) {
     var elem_id = e.id;
     var elem = document.getElementById(e.id);
@@ -25,7 +24,7 @@ function changeAll(e) {
                     document.getElementById('offer-text-4').style.display = 'none';
                     document.getElementById('offer-text-5').style.display = 'none';
                     img = document.querySelector('div.offer-info');
-                    img.setAttribute('style', document.styleSheets[0].cssRules['.offer-info:hover'])
+                    img.setAttribute('style', document.styleSheets[0].cssRules['offer-info:hover'])
                     img.style.backgroundImage = 'url("../img/selected-offer-1.png';
                     break;
                 case 'offer-link-2':
