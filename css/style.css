@@ -664,3 +664,53 @@ img.product-small {
 .carusel .spotlights .spotlight .about p img {
   margin: auto 0;
 }
+.footer_menu {
+  margin-top: 55px;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-top: 8px;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 41px;
+  width: 100%;
+  background: url("../img/footer-menu.png") no-repeat center;
+  text-align: justify;
+}
+.footer_menu ul {
+  list-style-type: none;
+  display: inline;
+}
+.footer_menu ul li {
+  display: inline;
+}
+.footer_menu ul li a {
+  display: inline-block;
+  color: #ffffff;
+  font: 300 13px/13px Arial, sans-serif;
+  text-decoration: none;
+}
+.footer_menu ul li a:hover {
+  color: #0bb1e8;
+}
+.footer_menu ul img {
+  display: inline;
+}
+.footer_menu span {
+  width: 100%;
+  display: inline-block;
+}
+.footer-links {
+  display: inline-block;
+  font: 300 13px/20px Arial, sans-serif;
+  color: #111017;
+}
+.footer-links p {
+  display: inline-block;
+}
+.footer-links a {
+  font: 300 13px/13px Arial, sans-serif;
+  text-decoration: none;
+  color: #0bb1e8;
+  display: inline-block;
+  border-bottom: 1px solid;
+}
