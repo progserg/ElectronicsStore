@@ -100,3 +100,8 @@ function scroll_Right() {
     last_elem.parentNode.removeChild(last_elem);
     elems[0].parentNode.insertBefore(last_elem, elems[0]);
 }
+
+function auto_Scroll() {
+    setInterval(scroll_Left, 3000);
+}
+document.onload = auto_Scroll();
