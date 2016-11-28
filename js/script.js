@@ -83,3 +83,20 @@ function changeAll(e) {
     }
 
 }
+
+function scroll_Left() {
+    var elems = document.querySelectorAll('div.spotlight');
+    var elems_count = elems.length;
+    var first_elem = elems[0];
+    first_elem.parentNode.removeChild(first_elem);
+    elems[elems_count-1].parentNode.appendChild(first_elem);
+
+}
+
+function scroll_Right() {
+    var elems = document.querySelectorAll('div.spotlight');
+    var elems_count = elems.length;
+    var last_elem = elems[elems_count-1];
+    last_elem.parentNode.removeChild(last_elem);
+    elems[0].parentNode.insertBefore(last_elem, elems[0]);
+}
