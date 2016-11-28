@@ -1,5 +1,4 @@
 ;
-
 function changeAll(e) {
     var elem_id = e.id;
     var elem = document.getElementById(e.id);
@@ -25,8 +24,8 @@ function changeAll(e) {
                     document.getElementById('offer-text-4').style.display = 'none';
                     document.getElementById('offer-text-5').style.display = 'none';
                     img = document.querySelector('div.offer-info');
-                    img.setAttribute('style', document.styleSheets[0].cssRules['.offer-info:hover'])
-                    img.style.backgroundImage = 'url("../img/selected-offer-1.png';
+                    img.setAttribute('style', document.styleSheets[0].cssRules['offer-info:hover'])
+                    img.style.backgroundImage = 'url("../img/selected-offer-1.png")';
                     break;
                 case 'offer-link-2':
                     elem.style.background = 'url("../img/offer-list-background-hover-2.png")';
@@ -38,7 +37,7 @@ function changeAll(e) {
                     document.getElementById('offer-text-5').style.display = 'none';
                     img = document.querySelector('div.offer-info');
                     img.setAttribute('style', document.styleSheets[0].cssRules['.offer-info:hover'])
-                    img.style.backgroundImage = 'url("../img/selected-offer-2.png';
+                    img.style.backgroundImage = 'url("../img/selected-offer-2.png")';
                     break;
                 case 'offer-link-3':
                     elem.style.background = 'url("../img/offer-list-background-hover-3.png")';
@@ -50,7 +49,7 @@ function changeAll(e) {
                     document.getElementById('offer-text-5').style.display = 'none';
                     img = document.querySelector('div.offer-info');
                     img.setAttribute('style', document.styleSheets[0].cssRules['.offer-info:hover'])
-                    img.style.backgroundImage = 'url("../img/selected-offer-3.png';
+                    img.style.backgroundImage = 'url("../img/selected-offer-3.png")';
                     break;
                 case 'offer-link-4':
                     elem.style.background = 'url("../img/offer-list-background-hover-4.png")';
@@ -62,7 +61,7 @@ function changeAll(e) {
                     document.getElementById('offer-text-5').style.display = 'none';
                     img = document.querySelector('div.offer-info');
                     img.setAttribute('style', document.styleSheets[0].cssRules['.offer-info:hover'])
-                    img.style.backgroundImage = 'url("../img/selected-offer-4.png';
+                    img.style.backgroundImage = 'url("../img/selected-offer-4.png")';
                     break;
                 case 'offer-link-5':
                     elem.style.background = 'url("../img/offer-list-background-hover-5.png")';
@@ -74,7 +73,7 @@ function changeAll(e) {
                     document.getElementById('offer-text-4').style.display = 'none';
                     img = document.querySelector('div.offer-info');
                     img.setAttribute('style', document.styleSheets[0].cssRules['.offer-info:hover'])
-                    img.style.backgroundImage = 'url("../img/selected-offer-5.png';
+                    img.style.backgroundImage = 'url("../img/selected-offer-5.png")';
                     break;
             }
             elem.querySelector('div a').style.color = '#ffffff';
