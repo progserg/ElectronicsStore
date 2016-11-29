@@ -895,16 +895,37 @@ img.product-small {
   box-sizing: border-box;
 
 }
+.contacts{
+  width: 615px;
+  margin-top: 10px;
+  button{
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  textarea{
+    width: 513px;
+    height: 519px;
+    margin: 0;
+    margin-top: 3px;
+    padding: 0;
+    border-color: @grey-stroke;
+    resize: none;
+  }
+}
 table{
   width: 100%;
   text-align: left;
   margin-top: 34px;
+
   tr{
     td{
       height: 30px;
       vertical-align: middle;
       &.button{
         height: 60px;
+      }
+      &.textarea-about{
+        vertical-align: top;
       }
       button{
         padding: 0;
@@ -922,6 +943,13 @@ table{
   td.middle{
     width: 353px;
     text-align: left;
+  }
+  td.wide{
+    width: 515px;
+    input{
+      width: 513px;
+      float: left;
+    }
   }
   td.info{
     width: 145px;

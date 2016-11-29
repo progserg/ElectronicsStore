@@ -752,6 +752,23 @@ img.product-small {
   float: right;
   box-sizing: border-box;
 }
+.contacts {
+  width: 615px;
+  margin-top: 10px;
+}
+.contacts button {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.contacts textarea {
+  width: 513px;
+  height: 519px;
+  margin: 0;
+  margin-top: 3px;
+  padding: 0;
+  border-color: #cacaca;
+  resize: none;
+}
 table {
   width: 100%;
   text-align: left;
@@ -763,6 +780,9 @@ table tr td {
 }
 table tr td.button {
   height: 60px;
+}
+table tr td.textarea-about {
+  vertical-align: top;
 }
 table tr td button {
   padding: 0;
@@ -778,6 +798,13 @@ table tr td button {
 table td.middle {
   width: 353px;
   text-align: left;
+}
+table td.wide {
+  width: 515px;
+}
+table td.wide input {
+  width: 513px;
+  float: left;
 }
 table td.info {
   width: 145px;
