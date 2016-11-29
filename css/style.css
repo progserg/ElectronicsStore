@@ -614,6 +614,9 @@ img.product-small {
   display: block;
   margin: 0 auto;
 }
+img.product-small.left {
+  float: left;
+}
 .view-content-header {
   width: 100%;
   float: left;
@@ -872,4 +875,76 @@ table input {
 }
 .pages a:first-child {
   border: none;
+}
+.product-info {
+  width: 490px;
+  float: right;
+}
+.product-info .description {
+  float: left;
+}
+.product-info .description p {
+  text-align: left;
+  margin: 0;
+  display: block;
+}
+.product-info .description p.model {
+  font: bold 13px/16px Arial, sans-serif;
+  color: #111017;
+}
+.product-info .description p.date {
+  font: normal 11px/16px Arial, sans-serif;
+  color: #8a8a8a;
+}
+.product-info .description p.price {
+  font: bold 13px/24px Arial, sans-serif;
+  color: #0bb1e8;
+}
+.product-info p {
+  display: inline-block;
+  color: #111017;
+  font: normal 13px/16px Arial, sans-serif;
+  text-align: left;
+  margin-top: 16px;
+}
+.product-info .price-button {
+  float: right;
+  width: 100px;
+  height: 32px;
+  background: url("../img/price-button.png") no-repeat center;
+}
+.product-info .price-button p {
+  float: none;
+  display: block;
+  margin: auto;
+  font: 300 24px/32px "Myriad Pro Regular", Arial, sans-serif;
+  text-align: center;
+  color: #2f3638;
+}
+.product-info .details {
+  width: 145px;
+  text-align: center;
+  height: 13px;
+  margin-top: 12px;
+  float: right;
+  margin-right: 25px;
+}
+.product-info .details a {
+  font: normal 13px/16px Arial, sans-serif;
+  color: #0bb1e8;
+  display: inline;
+}
+.product-info .details a.left {
+  float: left;
+}
+.product-info .details a.right {
+  float: right;
+}
+.product-info .details p {
+  display: inline;
+  vertical-align: top;
+}
+.new {
+  margin-bottom: 16px;
+  margin-top: 16px;
 }

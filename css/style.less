@@ -55,6 +55,7 @@ button:after,
 @grey-stroke: #cacaca;
 @grey-dotted-spliter: #cccccc;
 @grey-search: #a6a5a7;
+@grey-date: #8a8a8a;
 //цвета
 
 //функции
@@ -746,7 +747,9 @@ img.product-small {
   float: none;
   display: block;
   margin: 0 auto;
-
+  &.left{
+   float: left;
+  }
 }
 
 .view-content-header {
@@ -1027,4 +1030,76 @@ table {
   a:first-child {
     border: none;
   }
+}
+.product-info{
+  width: 490px;
+  float: right;
+  .description{
+    float: left;
+    p {
+      text-align: left;
+      margin: 0;
+      display: block;
+      &.model {
+        font: bold 13px/16px Arial, sans-serif;
+        color: @black-mini;
+      }
+      &.date{
+        font: normal 11px/16px Arial, sans-serif;
+        color: @grey-date;
+      }
+      &.price {
+        font: bold 13px/24px Arial, sans-serif;
+        color: @aqua;
+      }
+    }
+  }
+  p{
+    display: inline-block;
+    color: @black-mini;
+    font: normal 13px/16px Arial, sans-serif;
+    text-align: left;
+    margin-top: 16px;
+  }
+  .price-button{
+    float: right;
+    width: 100px;
+    height: 32px;
+    background: url("../img/price-button.png") no-repeat center;
+    p{
+      float: none;
+      display: block;
+      margin: auto;
+      font: 300 24px/32px "Myriad Pro Regular", Arial, sans-serif;
+      text-align: center;
+      color: @gray-main-menu;
+    }
+  }
+  .details {
+    width: 145px;
+    text-align: center;
+    height: 13px;
+    margin-top: 12px;
+    float: right;
+    margin-right: 25px;
+    a {
+      font: normal 13px/16px Arial, sans-serif;
+      color: @aqua;
+      display: inline;
+      &.left {
+        float: left;
+      }
+      &.right {
+        float: right;
+      }
+    }
+    p {
+      display: inline;
+      vertical-align: top;
+    }
+  }
+}
+.new{
+  margin-bottom: 16px;
+  margin-top: 16px;
 }
