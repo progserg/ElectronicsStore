@@ -539,6 +539,9 @@ aside {
 .row-view-content img.horisontal {
   padding: 0;
 }
+.row-view-content img.more {
+  height: 275px;
+}
 .cols-view {
   float: left;
 }
@@ -546,6 +549,9 @@ aside {
   position: relative;
   width: 163px;
   height: 223px;
+}
+.col-view.more {
+  height: 289px;
 }
 .col-view:first-child {
   padding-right: 7px;
@@ -557,11 +563,46 @@ aside {
   top: 143px;
   left: 23px;
 }
+.col-view .about .details {
+  width: 100%;
+  text-align: center;
+  height: 13px;
+  margin-top: 12px;
+}
+.col-view .about .details a {
+  display: inline;
+}
+.col-view .about .details a.left {
+  float: left;
+}
+.col-view .about .details a.right {
+  float: right;
+}
+.col-view .about .details p {
+  display: inline;
+  vertical-align: top;
+}
+.col-view .about .other-text {
+  font-size: 11px;
+  line-height: 16px;
+  /*&.inline{
+        display: inline-block;
+      }
+      &.right{
+        float: right;
+      }
+      &.left{
+        float: left;
+      }*/
+}
+.col-view .about .other-text.aqua {
+  color: #0bb1e8;
+}
 .col-view .about p {
   text-align: left;
 }
 .col-view .about p.model {
-  font: 200 13px/16px Arial, sans-serif;
+  font: normal 13px/16px Arial, sans-serif;
   color: #111017;
 }
 .col-view .about p.price {
@@ -751,6 +792,7 @@ img.product-small {
   width: 634px;
   float: right;
   box-sizing: border-box;
+  margin-top: 10px;
 }
 .contacts {
   width: 615px;
@@ -820,4 +862,14 @@ table input {
   height: 21px;
   padding: 0;
   margin: 0 auto;
+}
+.pages {
+  float: right;
+  margin-right: 20px;
+}
+.pages a:active {
+  border: none;
+}
+.pages a:first-child {
+  border: none;
 }

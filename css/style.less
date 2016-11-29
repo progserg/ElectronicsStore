@@ -665,6 +665,9 @@ aside {
     &.horisontal {
       padding: 0;
     }
+    &.more {
+      height: 275px;
+    }
   }
 }
 
@@ -677,6 +680,9 @@ aside {
   width: 163px;
   height: 223px;
   //background-color: yellow;
+  &.more {
+    height: 289px;
+  }
   &:first-child {
     padding-right: 7px;
   }
@@ -686,10 +692,46 @@ aside {
     margin: 0 auto;
     top: 143px;
     left: 23px;
+    .details {
+      width: 100%;
+      text-align: center;
+      height: 13px;
+      margin-top: 12px;
+      a {
+        display: inline;
+        &.left {
+          float: left;
+        }
+        &.right {
+          float: right;
+        }
+      }
+      p {
+        display: inline;
+        vertical-align: top;
+      }
+    }
+    .other-text {
+      font-size: 11px;
+      line-height: 16px;
+      /*&.inline{
+        display: inline-block;
+      }
+      &.right{
+        float: right;
+      }
+      &.left{
+        float: left;
+      }*/
+      &.aqua {
+        color: @aqua;
+
+      }
+    }
     p {
       text-align: left;
       &.model {
-        font: 200 13px/16px Arial, sans-serif;
+        font: normal 13px/16px Arial, sans-serif;
         color: @black-mini;
       }
       &.price {
@@ -706,8 +748,6 @@ img.product-small {
   margin: 0 auto;
 
 }
-
-
 
 .view-content-header {
   width: 100%;
@@ -795,7 +835,7 @@ img.product-small {
           &.price {
             color: @aqua;
           }
-          img{
+          img {
             margin: auto 0;
           }
         }
@@ -803,7 +843,8 @@ img.product-small {
     }
   }
 }
-.footer_menu{
+
+.footer_menu {
   margin-top: 55px;
   padding-left: 72px;
   padding-right: 72px;
@@ -814,40 +855,41 @@ img.product-small {
   width: 100%;
   background: url("../img/footer-menu.png") no-repeat center;
   text-align: justify;
-  ul{
+  ul {
     //margin: 0 auto;
     list-style-type: none;
     display: inline;
-    li{
+    li {
       display: inline;
-      a{
+      a {
         display: inline-block;
         color: @white;
-        font: 300 13px/13px Arial,sans-serif;
+        font: 300 13px/13px Arial, sans-serif;
         text-decoration: none;
-        &:hover{
+        &:hover {
           color: @aqua;
         }
       }
     }
-    img{
+    img {
       display: inline;
     }
   }
-  span{
+  span {
     width: 100%;
     display: inline-block;
   }
 }
+
 .footer-links {
   display: inline-block;
-  font: 300 13px/20px Arial,sans-serif;
+  font: 300 13px/20px Arial, sans-serif;
   color: @black-mini;
   p {
     display: inline-block;
   }
   a {
-    font: 300 13px/13px Arial,sans-serif;
+    font: 300 13px/13px Arial, sans-serif;
     text-decoration: none;
     color: @aqua;
     display: inline-block;
@@ -855,54 +897,59 @@ img.product-small {
   }
 }
 
-.text-aqua{
+.text-aqua {
 
   text-decoration: none;
   color: @aqua;
   font: normal 13px/13px Arial, sans-serif;
-  &.bold{
+  &.bold {
     font-weight: bold;
   }
 }
-.text-black{
+
+.text-black {
   text-decoration: none;
   color: @black-mini;
   font: normal 13px/13px Arial, sans-serif;
-  &.bold{
+  &.bold {
     font-weight: bold;
   }
 }
-.text-white{
+
+.text-white {
   text-decoration: none;
   color: @white;
   font: normal 13px/13px Arial, sans-serif;
-  &.bold{
+  &.bold {
     font-weight: bold;
   }
 }
-.note{
+
+.note {
   text-align: left;
-  p{
+  p {
     display: inline-block;
   }
-  a{
+  a {
     border-bottom: 1px solid;
   }
 }
-.row-view-content-short{
+
+.row-view-content-short {
   width: 634px;
   float: right;
   box-sizing: border-box;
-
+  margin-top: 10px;
 }
-.contacts{
+
+.contacts {
   width: 615px;
   margin-top: 10px;
-  button{
+  button {
     margin-right: 0;
     margin-left: 10px;
   }
-  textarea{
+  textarea {
     width: 513px;
     height: 519px;
     margin: 0;
@@ -913,22 +960,23 @@ img.product-small {
     resize: none;
   }
 }
-table{
+
+table {
   width: 100%;
   text-align: left;
   margin-top: 34px;
 
-  tr{
-    td{
+  tr {
+    td {
       height: 30px;
       vertical-align: middle;
-      &.button{
+      &.button {
         height: 60px;
       }
-      &.textarea-about{
+      &.textarea-about {
         vertical-align: top;
       }
-      button{
+      button {
         padding: 0;
         margin: 0;
         margin-right: 10px;
@@ -941,29 +989,42 @@ table{
       }
     }
   }
-  td.middle{
+  td.middle {
     width: 353px;
     text-align: left;
   }
-  td.wide{
+  td.wide {
     width: 515px;
-    input{
+    input {
       width: 513px;
       float: left;
     }
   }
-  td.info{
+  td.info {
     width: 145px;
   }
-  td.required{
+  td.required {
     width: 136px;
   }
-  input{
+  input {
     float: none;
     width: 331px;
     display: block;
     height: 21px;
     padding: 0;
     margin: 0 auto;
+  }
+}
+
+.pages {
+  float: right;
+  margin-right: 20px;
+  a {
+    &:active {
+      border: none;
+    }
+  }
+  a:first-child {
+    border: none;
   }
 }
