@@ -1,4 +1,8 @@
 ;
+function offer_menu_start() {
+    var e = document.getElementById('offer-link-1');
+    changeAll(e);
+}
 function changeAll(e) {
     var elem_id = e.id;
     var elem = document.getElementById(e.id);
@@ -104,3 +108,4 @@ function auto_Scroll() {
     setInterval(scroll_Left, 3000);
 }
 document.onload = auto_Scroll();
+document.onload = offer_menu_start();
